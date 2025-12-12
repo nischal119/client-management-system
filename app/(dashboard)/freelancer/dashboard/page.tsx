@@ -3,6 +3,7 @@
 import { StatsCard } from "@/components/ui/stats-card"
 import { DollarSign, Eye, Briefcase, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { GrowthChart } from "@/components/charts/GrowthChart"
 
 export default function FreelancerDashboardPage() {
   const stats = [
@@ -41,7 +42,7 @@ export default function FreelancerDashboardPage() {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-8">
-        {/* Earnings Chart Placeholder */}
+        {/* Earnings Chart */}
         <div className="lg:col-span-2 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-xl font-bold text-gray-900">Earnings Overview</h2>
@@ -50,11 +51,8 @@ export default function FreelancerDashboardPage() {
               <option>This Year</option>
             </select>
           </div>
-          <div className="h-64 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl flex items-center justify-center border-2 border-dashed border-gray-200">
-            <div className="text-center">
-              <p className="text-gray-400 font-medium">Chart Visualization Placeholder</p>
-              <p className="text-sm text-gray-400">Monthly Earnings Graph would go here</p>
-            </div>
+          <div className="h-64 w-full">
+            <GrowthChart />
           </div>
         </div>
 
